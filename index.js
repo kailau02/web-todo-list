@@ -40,6 +40,11 @@ function addPressed(){
 }
 
 let inputField = document.getElementsByClassName("input-field")[0];
+inputField.addEventListener("keypress", function(e){
+    if(e.keyCode === 13){
+        addPressed();
+    }
+});
 let addButton = document.getElementsByClassName("add-btn")[0];
 addButton.addEventListener("click", addPressed);
 
